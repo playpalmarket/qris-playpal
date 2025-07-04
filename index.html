@@ -5,27 +5,29 @@
   <title>QRIS PlayPal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    html, body {
       margin: 0;
-      background-color: #ffffff;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      height: 100%;
+      background: #fff;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      flex-direction: column;
     }
 
     img {
-      max-width: 90%;
-      width: 320px;
+      width: min(90vw, 90vh);
+      max-width: 500px;
       height: auto;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
+      font-size: 20px;
       margin-bottom: 20px;
-      font-size: 22px;
+      color: #000;
+      font-weight: 600;
     }
   </style>
 </head>
