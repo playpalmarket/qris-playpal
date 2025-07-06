@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>QRIS PlayPal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QRIS Pembayaran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    html, body {
+    :root {
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --text: #1f2937;
+      --primary: #2563eb;
+      --shadow: rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f3f3f3;
-      height: 100%;
-      width: 100%;
     }
 
     body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
+      padding: 24px;
     }
 
-    img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: contain;
+    .card {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 12px 36px var(--shadow);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .card h1 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+
+    .qris-img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .desc {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 24px;
+      }
+
+      .card h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/playpalmarket/qris-playpal/main/IMG_7065.jpeg" alt="QRIS PlayPal">
+  <div class="card">
+    <h1>Scan untuk Bayar via QRIS</h1>
+    <img src="qris.jpeg" alt="Kode QRIS" class="qris-img" />
+    <p class="desc">Silakan scan menggunakan aplikasi pembayaran seperti DANA, OVO, GoPay, ShopeePay, dll.</p>
+  </div>
 </body>
 </html>
